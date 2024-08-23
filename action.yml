@@ -1,0 +1,23 @@
+name: "Node.js Docker MVP Action"
+description: "A GitHub Action that runs a JavaScript file using Node.js in a Docker container."
+author: "LB"
+
+inputs:
+  example_input:
+    description: "An example input to demonstrate passing data."
+    required: false
+    default: "default value"
+
+outputs:
+  example_output:
+    description: "An example output from the action."
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.example_input }}
+
+branding:
+  icon: "terminal"
+  color: "blue"
